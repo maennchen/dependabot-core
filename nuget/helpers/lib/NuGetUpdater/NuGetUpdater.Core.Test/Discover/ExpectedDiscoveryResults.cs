@@ -22,6 +22,7 @@ public record ExpectedSdkProjectDiscoveryResult : ExpectedDependencyDiscoveryRes
     public required ImmutableArray<string> ImportedFiles { get; init; }
     public required ImmutableArray<string> AdditionalFiles { get; init; }
     public string? ErrorDetails { get; init; }
+    public ImmutableDictionary<string, ImmutableArray<string>>? ExpectedDependencyGraph { get; init; }
 }
 
 public record ExpectedDependencyDiscoveryResult : IDiscoveryResultWithDependencies
