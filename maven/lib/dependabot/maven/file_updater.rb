@@ -102,7 +102,7 @@ module Dependabot
         return false if old_req.nil?
         return false unless new_req[:requirement] == old_req[:requirement]
 
-        Dependabot.logger.debug(
+        Dependabot.logger.info(
           "Skipping #{dependency.name} in #{new_req[:file] || new_req.dig(:metadata, :pom_file)} - " \
           "requirement unchanged (#{new_req[:requirement]}), only metadata differs"
         )
